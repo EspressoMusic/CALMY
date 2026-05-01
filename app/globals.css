@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* Tailwind v4: explicitly scan Next.js App Router sources for class extraction */
+@source "./**/*.{js,jsx,ts,tsx}";
+@source "./components/**/*.{js,jsx,ts,tsx}";
+
+@theme {
+  --font-serif: var(--font-rubik), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-rubik), ui-sans-serif, system-ui, sans-serif;
+
+  --color-sea-salt: #f8fafc;
+  --color-deep-ocean: #1e3a8a;
+  --color-soft-slate: #64748b;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-sea-salt);
+  color: var(--color-deep-ocean);
+  font-style: italic;
+  font-feature-settings: "kern" 1;
+  text-rendering: geometricPrecision;
+}

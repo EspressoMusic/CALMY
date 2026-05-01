@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>בניית אתרים בסגנון Storytelling</title>
+    <meta
+      name="description"
+      content="אתרי תדמית ומכירה בעיצוב Storytelling: מאפיון, דרך עיצוב ופיתוח, ועד השקה חכמה."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero section reveal">
+      <div class="hero-background">
+        <div class="paper"></div>
+        <div class="cursor-blink"></div>
+      </div>
+      <div class="container hero-content">
+        <p class="eyebrow">The Hook | הניצוץ</p>
+        <h1>לכל עסק גדול יש רגע שבו הוא הופך מרעיון למציאות דיגיטלית.</h1>
+        <p class="lead">המסע שלכם מתחיל כאן.</p>
+        <button class="btn btn-primary" data-scroll="#blueprint">בואו נצא לדרך</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="blueprint" class="section blueprint reveal">
+        <div class="container">
+          <p class="eyebrow">The Blueprint | תחנה ראשונה: האפיון</p>
+          <h2>אנחנו לא בונים ישר. אנחנו מתכננים.</h2>
+          <p>
+            כאן אנחנו מבינים מי הקהל שלכם, מה הוא מחפש, ומה יגרום לו להגיד "וואו" כבר
+            מהשנייה הראשונה.
+          </p>
+          <div class="wireframes">
+            <div class="wire card-one"></div>
+            <div class="wire card-two"></div>
+            <div class="wire card-three"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="soul" class="section soul reveal">
+        <div class="container">
+          <p class="eyebrow">The Soul | תחנה שנייה: העיצוב</p>
+          <h2>העיצוב הוא לא רק יופי - הוא השפה שבה האתר מדבר עם הלקוחות שלכם.</h2>
+          <p>מהסקיצה השקטה לצבעים חיים, טיפוגרפיה מדויקת וחוויית משתמש שמרגישה טבעית.</p>
+
+          <div class="color-lab">
+            <label for="colorRange">החליקו כדי "לצבוע" את האתר</label>
+            <input id="colorRange" type="range" min="0" max="100" value="30" />
+            <div class="color-preview">
+              <div class="preview mono"></div>
+              <div class="preview vivid" id="vividPreview"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="engine" class="section engine reveal">
+        <div class="container">
+          <p class="eyebrow">The Engine | תחנה שלישית: הפיתוח</p>
+          <h2>מתחת למכסה המנוע: קוד נקי, מהיר ומותאם לכל מכשיר.</h2>
+          <p>בלי קיצורי דרך. עם ארכיטקטורה שעובדת גם היום וגם כשתגדלו מחר.</p>
+          <div class="code-lines" aria-hidden="true">
+            <span>&lt;section class="conversion-flow"&gt;</span>
+            <span>  const performance = optimizeUX(businessGoals);</span>
+            <span>  deploy({ speed: "fast", seo: "strong", responsive: true });</span>
+            <span>&lt;/section&gt;</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section portfolio reveal">
+        <div class="container">
+          <p class="eyebrow">Featured Work | פורטפוליו</p>
+          <h2>מקום להציג את הפרויקטים הכי טובים שלכם</h2>
+          <div class="portfolio-grid">
+            <article class="project-card">
+              <h3>אתר תדמית למותג פרימיום</h3>
+              <p>Storytelling חזותי שהעלה פניות איכותיות תוך 30 יום.</p>
+            </article>
+            <article class="project-card">
+              <h3>אתר מכירה עם המרות גבוהות</h3>
+              <p>שילוב UX ממוקד ותוכן מדויק שהגדיל מכירות אונליין.</p>
+            </article>
+            <article class="project-card">
+              <h3>דף נחיתה לקמפיין השקה</h3>
+              <p>מסר חד, טעינה מהירה ותוצאה שמייצרת לידים חמים.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="liftoff" class="section liftoff reveal">
+        <div class="container">
+          <p class="eyebrow">The Liftoff | התחנה האחרונה: ההשקה</p>
+          <h2>האתר שלכם באוויר. מוכן למכור, להרשים ולגדול.</h2>
+          <div class="devices">
+            <div class="device desktop"></div>
+            <div class="device tablet"></div>
+            <div class="device phone"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section cta reveal">
+        <div class="container">
+          <h2>מוכנים להתחיל את הסיפור שלכם?</h2>
+          <p>השאירו פרטים ונחזור אליכם עם תוכנית מדויקת לאתר שיקדם את העסק שלכם.</p>
+          <form class="contact-form">
+            <input type="text" name="name" placeholder="שם מלא" required />
+            <input type="email" name="email" placeholder='דוא"ל' required />
+            <textarea name="message" rows="4" placeholder="ספרו לנו על העסק שלכם"></textarea>
+            <button class="btn btn-primary" type="submit">שליחה</button>
+          </form>
+          <p class="form-message" id="formMessage" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
