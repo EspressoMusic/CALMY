@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
-const basePath = "/WATER";
+const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1];
+const basePath =
+  process.env.NEXT_BASE_PATH ?? (repoName === "CALMY" ? "/CALMY" : "/WATER");
 
 const nextConfig = {
   output: "export",

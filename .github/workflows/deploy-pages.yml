@@ -35,11 +35,11 @@ jobs:
 
       - name: Build static export
         run: npm run build
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
