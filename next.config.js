@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
+const basePath = "/WATER";
+
 const nextConfig = {
+  output: "export",
+  basePath,
+  trailingSlash: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -9,6 +15,9 @@ const nextConfig = {
       },
     ],
   },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

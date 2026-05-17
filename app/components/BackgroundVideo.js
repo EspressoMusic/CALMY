@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { assetPath } from "../../lib/basePath";
 
 /**
  * רקע וידאו בתוך קונטיינר ממוקם (למשל גיבור בלבד): מילוי + זOOM קל כדי לחתוך פסים שחורים בתוך הפריים.
- * הקובץ ב-public — ברירת מחדל: /bg-video.mp4
+ * הקובץ ב-public — ברירת מחדל: /bg-video.mp4 (עם basePath ל-GitHub Pages)
  */
-export default function BackgroundVideo({ src = "/bg-video.mp4" }) {
+export default function BackgroundVideo({ src = assetPath("/bg-video.mp4") }) {
   const videoRef = useRef(null);
 
   useEffect(() => {

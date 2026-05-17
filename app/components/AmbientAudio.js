@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { assetPath } from "../../lib/basePath";
 
 const TARGET_VOLUME = 0.42;
 
@@ -39,7 +40,7 @@ function armForPlayback(a) {
   a.volume = TARGET_VOLUME;
 }
 
-export default function AmbientAudio({ src = "/ambient-river.mp3" }) {
+export default function AmbientAudio({ src = assetPath("/ambient-river.mp3") }) {
   const [audible, setAudible] = useState(false);
 
   useEffect(() => {
