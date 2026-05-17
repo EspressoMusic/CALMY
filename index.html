@@ -1,131 +1,304 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>בניית אתרים בסגנון Storytelling</title>
+    <title>The World is Calling – Travel With Us</title>
     <meta
       name="description"
-      content="אתרי תדמית ומכירה בעיצוב Storytelling: מאפיון, דרך עיצוב ופיתוח, ועד השקה חכמה."
+      content="Budget-friendly flights to bucket-list experiences. We craft tailor-made itineraries and lifelong travel memories."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@0;1&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header class="hero section reveal">
-      <div class="hero-background">
-        <div class="paper"></div>
-        <div class="cursor-blink"></div>
-      </div>
-      <div class="container hero-content">
-        <p class="eyebrow">The Hook | הניצוץ</p>
-        <h1>לכל עסק גדול יש רגע שבו הוא הופך מרעיון למציאות דיגיטלית.</h1>
-        <p class="lead">המסע שלכם מתחיל כאן.</p>
-        <button class="btn btn-primary" data-scroll="#blueprint">בואו נצא לדרך</button>
-      </div>
-    </header>
-
-    <main>
-      <section id="blueprint" class="section blueprint reveal">
-        <div class="container">
-          <p class="eyebrow">The Blueprint | תחנה ראשונה: האפיון</p>
-          <h2>אנחנו לא בונים ישר. אנחנו מתכננים.</h2>
-          <p>
-            כאן אנחנו מבינים מי הקהל שלכם, מה הוא מחפש, ומה יגרום לו להגיד "וואו" כבר
-            מהשנייה הראשונה.
-          </p>
-          <div class="wireframes">
-            <div class="wire card-one"></div>
-            <div class="wire card-two"></div>
-            <div class="wire card-three"></div>
-          </div>
+    <div class="page">
+      <section class="hero" aria-label="Introduction">
+        <div class="video-wrap" aria-hidden="true">
+          <video id="bg-video" autoplay muted loop playsinline preload="auto">
+            <source src="./bg-video.mp4" type="video/mp4" />
+          </video>
         </div>
-      </section>
+        <canvas id="ripple-canvas" class="ripple-canvas" aria-hidden="true"></canvas>
 
-      <section id="soul" class="section soul reveal">
-        <div class="container">
-          <p class="eyebrow">The Soul | תחנה שנייה: העיצוב</p>
-          <h2>העיצוב הוא לא רק יופי - הוא השפה שבה האתר מדבר עם הלקוחות שלכם.</h2>
-          <p>מהסקיצה השקטה לצבעים חיים, טיפוגרפיה מדויקת וחוויית משתמש שמרגישה טבעית.</p>
-
-          <div class="color-lab">
-            <label for="colorRange">החליקו כדי "לצבוע" את האתר</label>
-            <input id="colorRange" type="range" min="0" max="100" value="30" />
-            <div class="color-preview">
-              <div class="preview mono"></div>
-              <div class="preview vivid" id="vividPreview"></div>
+        <div class="hero-inner">
+          <header class="hero-header">
+            <div class="hero-tags reveal-hero">
+              <span class="hero-tag">Global</span>
+              <span class="hero-tag-divider" aria-hidden="true"></span>
+              <span class="hero-tag">Trusted</span>
+              <span class="hero-tag-divider" aria-hidden="true"></span>
+              <span class="hero-tag">Tailor-made</span>
             </div>
-          </div>
+
+            <div class="hero-copy">
+              <h1 class="hero-title scroll-reveal reveal-up hero-on-load">
+                <span class="hero-title-line">
+                  <span class="hero-title-word">the</span>
+                  <span class="hero-title-word">world</span>
+                  <span class="hero-title-word">is</span>
+                  <span class="hero-title-word">calling</span>
+                </span>
+                <span class="hero-title-line hero-title-accent">
+                  <span class="hero-title-word hero-title-word-dash" aria-hidden="true">–</span>
+                  <span class="hero-title-word">let</span>
+                  <span class="hero-title-word">us</span>
+                  <span class="hero-title-word">take</span>
+                  <span class="hero-title-word">you</span>
+                  <span class="hero-title-word">there.</span>
+                </span>
+              </h1>
+              <p class="hero-lead font-open scroll-reveal reveal-up hero-on-load" style="--reveal-delay: 140ms">Your next adventure starts here.</p>
+              <p class="hero-sub font-open scroll-reveal reveal-up hero-on-load" style="--reveal-delay: 260ms">
+                From budget-friendly flights to bucket-list experiences, we don’t just book
+                trips—we craft lifelong memories.
+              </p>
+              <div class="hero-cta-wrap scroll-reveal reveal-scale hero-on-load" style="--reveal-delay: 400ms">
+                <button type="button" class="btn-hero font-open">Start planning</button>
+              </div>
+            </div>
+          </header>
         </div>
       </section>
 
-      <section id="engine" class="section engine reveal">
-        <div class="container">
-          <p class="eyebrow">The Engine | תחנה שלישית: הפיתוח</p>
-          <h2>מתחת למכסה המנוע: קוד נקי, מהיר ומותאם לכל מכשיר.</h2>
-          <p>בלי קיצורי דרך. עם ארכיטקטורה שעובדת גם היום וגם כשתגדלו מחר.</p>
-          <div class="code-lines" aria-hidden="true">
-            <span>&lt;section class="conversion-flow"&gt;</span>
-            <span>  const performance = optimizeUX(businessGoals);</span>
-            <span>  deploy({ speed: "fast", seo: "strong", responsive: true });</span>
-            <span>&lt;/section&gt;</span>
+      <main class="main">
+        <section class="section scroll-section" aria-labelledby="why-heading">
+          <div class="section-intro">
+            <p class="eyebrow scroll-reveal reveal-fade">Why travelers trust us</p>
+            <h2 id="why-heading" class="heading-serif scroll-reveal reveal-up" style="--reveal-delay: 100ms">
+              Why Choose Us?
+            </h2>
+            <p class="section-lead font-open scroll-reveal reveal-up" style="--reveal-delay: 200ms">
+              In a world of endless search results, we provide the clarity and expertise you
+              need. Here’s why travelers trust us:
+            </p>
           </div>
-        </div>
-      </section>
 
-      <section id="portfolio" class="section portfolio reveal">
-        <div class="container">
-          <p class="eyebrow">Featured Work | פורטפוליו</p>
-          <h2>מקום להציג את הפרויקטים הכי טובים שלכם</h2>
-          <div class="portfolio-grid">
-            <article class="project-card">
-              <h3>אתר תדמית למותג פרימיום</h3>
-              <p>Storytelling חזותי שהעלה פניות איכותיות תוך 30 יום.</p>
+          <div class="grid-2">
+            <article class="card scroll-reveal reveal-left" style="--reveal-delay: 0ms">
+              <p class="card-num">01</p>
+              <h3 class="card-title heading-serif">Global Expertise</h3>
+              <p class="card-body font-open">
+                We aren’t just agents; we are explorers. Every destination we recommend is
+                hand-picked and vetted for quality.
+              </p>
             </article>
-            <article class="project-card">
-              <h3>אתר מכירה עם המרות גבוהות</h3>
-              <p>שילוב UX ממוקד ותוכן מדויק שהגדיל מכירות אונליין.</p>
+            <article class="card scroll-reveal reveal-right" style="--reveal-delay: 120ms">
+              <p class="card-num">02</p>
+              <h3 class="card-title heading-serif">Insider Rates</h3>
+              <p class="card-body font-open">
+                Thanks to our direct partnerships with airlines and hotels worldwide, we secure
+                deals you won't find on standard booking engines.
+              </p>
             </article>
-            <article class="project-card">
-              <h3>דף נחיתה לקמפיין השקה</h3>
-              <p>מסר חד, טעינה מהירה ותוצאה שמייצרת לידים חמים.</p>
+            <article class="card scroll-reveal reveal-left" style="--reveal-delay: 240ms">
+              <p class="card-num">03</p>
+              <h3 class="card-title heading-serif">24/7 Peace of Mind</h3>
+              <p class="card-body font-open">
+                Flight delays? Last-minute changes? We’ve got your back. From takeoff to touchdown,
+                you are never traveling alone.
+              </p>
+            </article>
+            <article class="card scroll-reveal reveal-right" style="--reveal-delay: 360ms">
+              <p class="card-num">04</p>
+              <h3 class="card-title heading-serif">Tailor-Made Travel</h3>
+              <p class="card-body font-open">
+                We don’t believe in "one size fits all." We listen to your vision and build a custom
+                itinerary that fits your rhythm and your budget.
+              </p>
             </article>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="liftoff" class="section liftoff reveal">
-        <div class="container">
-          <p class="eyebrow">The Liftoff | התחנה האחרונה: ההשקה</p>
-          <h2>האתר שלכם באוויר. מוכן למכור, להרשים ולגדול.</h2>
-          <div class="devices">
-            <div class="device desktop"></div>
-            <div class="device tablet"></div>
-            <div class="device phone"></div>
+        <section class="section section-trips scroll-section" aria-labelledby="trips-heading">
+          <div class="section-intro section-intro-left">
+            <p class="eyebrow scroll-reveal reveal-fade">Recently Booked Trips</p>
+            <h2 id="trips-heading" class="heading-serif scroll-reveal reveal-up" style="--reveal-delay: 100ms">
+              Real Journeys for Real Travelers.
+            </h2>
+            <p class="section-lead font-open scroll-reveal reveal-up" style="--reveal-delay: 200ms">
+              Take a look at some of the incredible getaways we’ve recently organized for our
+              clients:
+            </p>
           </div>
-        </div>
-      </section>
 
-      <section id="contact" class="section cta reveal">
-        <div class="container">
-          <h2>מוכנים להתחיל את הסיפור שלכם?</h2>
-          <p>השאירו פרטים ונחזור אליכם עם תוכנית מדויקת לאתר שיקדם את העסק שלכם.</p>
-          <form class="contact-form">
-            <input type="text" name="name" placeholder="שם מלא" required />
-            <input type="email" name="email" placeholder='דוא"ל' required />
-            <textarea name="message" rows="4" placeholder="ספרו לנו על העסק שלכם"></textarea>
-            <button class="btn btn-primary" type="submit">שליחה</button>
-          </form>
-          <p class="form-message" id="formMessage" aria-live="polite"></p>
-        </div>
-      </section>
-    </main>
+          <div class="grid-2">
+            <article class="trip-card scroll-reveal reveal-scale" style="--reveal-delay: 0ms">
+              <img
+                src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                alt="Snowy northern landscape under northern lights in Lapland"
+                width="1600"
+                height="1600"
+                loading="eager"
+                decoding="async"
+              />
+              <div class="trip-overlay" aria-hidden="true"></div>
+              <div class="trip-content">
+                <p class="trip-style">Family Adventure</p>
+                <h3 class="trip-title heading-serif">Lapland, Finland</h3>
+                <p class="trip-desc font-open">
+                  Snowmobile safaris, glass igloo stays, and Northern Lights hunting.
+                </p>
+              </div>
+            </article>
+            <article class="trip-card scroll-reveal reveal-scale" style="--reveal-delay: 150ms">
+              <img
+                src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                alt="Neon city skyline at night evoking Tokyo"
+                width="1600"
+                height="1600"
+                loading="eager"
+                decoding="async"
+              />
+              <div class="trip-overlay" aria-hidden="true"></div>
+              <div class="trip-content">
+                <p class="trip-style">Urban Honeymoon</p>
+                <h3 class="trip-title heading-serif">Tokyo &amp; Kyoto</h3>
+                <p class="trip-desc font-open">
+                  A blend of neon skyscrapers and ancient tea ceremonies in boutique luxury.
+                </p>
+              </div>
+            </article>
+            <article class="trip-card scroll-reveal reveal-scale" style="--reveal-delay: 300ms">
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                alt="Tropical beach with turquoise water"
+                width="1600"
+                height="1600"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              />
+              <div class="trip-overlay" aria-hidden="true"></div>
+              <div class="trip-content">
+                <p class="trip-style">Premium Escape</p>
+                <h3 class="trip-title heading-serif">Zanzibar</h3>
+                <p class="trip-desc font-open">
+                  All-inclusive beachfront resorts, private reef diving, and spice farm tours.
+                </p>
+              </div>
+            </article>
+            <article class="trip-card scroll-reveal reveal-scale" style="--reveal-delay: 450ms">
+              <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                alt="Snow-covered mountain ridge above clouds"
+                width="1600"
+                height="1600"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              />
+              <div class="trip-overlay" aria-hidden="true"></div>
+              <div class="trip-content">
+                <p class="trip-style">Ski &amp; Snowboard</p>
+                <h3 class="trip-title heading-serif">The Swiss Alps</h3>
+                <p class="trip-desc font-open">
+                  All-in-one packages: Flights, gear, passes, and the best après-ski spots.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
 
-    <script src="script.js"></script>
+        <section class="contact-panel" aria-labelledby="contact-heading">
+            <div class="contact-intro">
+              <p class="eyebrow scroll-reveal reveal-fade">Contact</p>
+              <h2 id="contact-heading" class="heading-serif scroll-reveal reveal-up" style="--reveal-delay: 100ms">Let’s plan your next trip</h2>
+              <p class="section-lead font-open scroll-reveal reveal-up" style="--reveal-delay: 200ms">
+                Tell us your dates, dream destinations, and budget—we’ll reply with ideas, options,
+                and next steps. Prefer email or phone? Either works.
+              </p>
+            </div>
+
+            <div class="contact-grid">
+              <div class="contact-box scroll-reveal reveal-left" style="--reveal-delay: 80ms">
+                <div class="scroll-reveal reveal-fade" style="--reveal-delay: 180ms">
+                  <p class="eyebrow eyebrow-tight">Email</p>
+                  <a class="contact-link" href="mailto:hello@studio.example"
+                    >hello@studio.example</a
+                  >
+                </div>
+                <div class="scroll-reveal reveal-fade" style="--reveal-delay: 280ms">
+                  <p class="eyebrow eyebrow-tight">Phone</p>
+                  <a class="contact-link" href="tel:+15550000000">+1 (555) 000-0000</a>
+                </div>
+              </div>
+
+              <div class="contact-box contact-box-actions scroll-reveal reveal-right" style="--reveal-delay: 160ms">
+                <div class="scroll-reveal reveal-fade" style="--reveal-delay: 260ms">
+                  <p class="eyebrow eyebrow-tight">Hours</p>
+                  <p class="hours-text font-open">
+                    Monday–Friday, 9:00–18:00 (your timezone).
+                    <span class="hours-note"
+                      >24/7 support applies once your trip is booked.</span
+                    >
+                  </p>
+                </div>
+                <a
+                  class="btn-contact scroll-reveal reveal-scale"
+                  style="--reveal-delay: 380ms"
+                  href="mailto:hello@studio.example?subject=New%20trip%20inquiry"
+                  >Send a message</a
+                >
+              </div>
+            </div>
+        </section>
+
+        <footer class="site-footer scroll-section">
+          <p class="footer-eyebrow scroll-reveal reveal-fade">Crafted journeys worldwide</p>
+          <p class="footer-copy font-open scroll-reveal reveal-up" style="--reveal-delay: 120ms">
+            © <span id="year"></span> Your travel studio. All rights reserved.
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <button
+      type="button"
+      id="ambient-audio-btn"
+      class="ambient-audio-btn"
+      aria-pressed="true"
+      aria-label="Mute ambient river sound"
+    >
+      <svg
+        class="icon-muted hidden"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M11 5 6 9H2v6h4l5 4V5z" />
+        <path d="m22 9-6 6" />
+        <path d="m16 9 6 6" />
+      </svg>
+      <svg
+        class="icon-unmuted"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M11 5 6 9H2v6h4l5 4V5z" />
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+        <path d="M17.66 6.34a8 8 0 0 1 0 11.32" />
+      </svg>
+    </button>
+
+    <audio id="ambient-audio" loop preload="auto" autoplay muted playsinline>
+      <source src="./ambient-river.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="./script.js" defer></script>
   </body>
 </html>
